@@ -1,0 +1,23 @@
+
+<a-scene embedded antialias="true" shadow="type: pcfsoft">
+  <a-assets>
+    <img id="starrySky" src="starrySkyTexture.png">
+    <img id="auroraTexture" src="auroraTexture.png">
+    <img id="woodTexture" src="woodTexture.png">
+    <img id="sandTexture" src="sandTexture.png">
+    <img id="marbleTexture" src="marbleTexture.png">
+  </a-assets>
+
+  <a-sky src="#starrySky"></a-sky>
+
+  <a-entity light="type: ambient; color: #555"></a-entity>
+  <a-entity light="type: directional; castShadow: true; intensity: 0.5" position="-2 4 -4"></a-entity>
+
+  <a-entity id="aurora" geometry="primitive: plane; height: 50; width: 50" material="src: #auroraTexture; side: double; transparent: true; opacity: 0.8" position="0 5 -10" rotation="0 0 0"></a-entity>
+
+  <a-box id="table" position="0 1 -3" rotation="0 0 0" width="2" height="0.5" depth="1" material="src: #woodTexture"></a-box>
+
+  <a-box id="sandbox" position="0 1.3 -3" rotation="0 0 0" width="1.5" height="0.2" depth="1" material="src: #sandTexture"></a-box>
+
+  <a-entity id="marbles" geometry="primitive: sphere; radius: 0.05" material="src: #marbleTexture" position="0 1.35 -3" repeat="5" spread="0.1"></a-entity>
+</a-scene>
